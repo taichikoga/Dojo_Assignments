@@ -1,0 +1,45 @@
+** Step 1: Navigate to your virtual environment and activate it **
+Mac/Linux: source djangoPy3Env\bin\activate
+Windows Cmd: call djangoPy3Env\Scripts\activate
+Windows Gitbash: source djangoPy3Env\Scripts\activate
+
+** Step 2: Navigate to where you want to create your project **
+                
+django-admin startproject YourProjectNameHere
+
+
+** Step 3: Navigate into the project and create an app
+
+cd YourProjectNameHere
+python manage.py startapp AppNameHere
+
+
+** Step 4: Open the project in Visual Studio Code, Navigate into the App, and create a urls.py. Put this in the file **
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+
+]
+
+
+** Step 5: Navigate back to the Project Level and open settings.py **
+
+** IN THE INSTALLED_APPS **
+INSTALLED_APPS = [
+    'AppNameHere',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+** Step 6: In your project level urls.py **
+from django.urls import path, include
+
+urlpatterns = [
+    path('whateverpathyouwanttostartyourapp', include('AppNameHere.urls'))
+]

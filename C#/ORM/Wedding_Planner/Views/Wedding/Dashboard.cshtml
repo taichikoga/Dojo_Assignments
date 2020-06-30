@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Dashboard Page";
+}
+@model List<Wedding>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Wedding Planner</h1>
+    <table class="table">
+        <tr>
+            <th scope="col">Wedding</th>
+            <th scope="col">Date</th>
+            <th scope="col">Guest</th>
+            <th scope="col">Action</th>
+        </tr>
+        @foreach (Wedding wedding in Model)
+        {
+            <tr>
+                <td scope="row"><a href="/details/@wedding.WeddingId">@wedding.WedderOne & @wedding.WedderTwo</a></td>
+                <td scope="row">@wedding.Date.ToString("dddd, dd MMMM yyyy")</td>
+                <td scope="row">@wedding.Attendees.Where(attend => attend.IsRSVPed == true).ToList().Count</td>
+                <td scope="row">
+                        @{
+                            bool alreadyRSVPed = wedding.Attendees.Any(attend => attend.UserId == Context.Session.GetInt32("UserId") && attend.IsRSVPed);
+                            bool haveNotRSVPED = wedding.Attendees.Any(attend => attend.UserId == Context.Session.GetInt32("UserId") && attend.IsRSVPed == false);
+                            if (wedding.Creator.UserId == @Context.Session.GetInt32("UserId"))
+                            {
+                                <form
+                                    method="POST"
+                                    asp-controller="Wedding"
+                                    asp-action="Delete"
+                                    asp-route-weddingId="@wedding.WeddingId"
+                                >
+                                    <button class="text-danger">Delete</button>
+                                </form>
+                            }
+                            else
+                            {
+                                if (alreadyRSVPed == false)
+                                {
+                                    <form
+                                        method="POST"
+                                        asp-controller="Wedding"
+                                        asp-action="RSVP"
+                                        asp-route-IsRSVPed="@true"
+                                        asp-route-weddingId="@wedding.WeddingId"
+                                        asp-route-userId="@Context.Session.GetInt32("UserId")"
+                                    >
+                                        <button class="text-success">RSVP</button>
+                                    </form>
+                                }
+                                else if (haveNotRSVPED == false)
+                                {
+                                    <form
+                                        method="POST"
+                                        asp-controller="Wedding"
+                                        asp-action="RSVP"
+                                        asp-route-IsRSVPed="@false"
+                                        asp-route-weddingId="@wedding.WeddingId"
+                                        asp-route-userId="@Context.Session.GetInt32("UserId")"
+                                    >
+                                        <button class="text-warning">Un-RSVP</button>
+                                    </form
+                                    >
+                                }
+                            }
+                        }
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="text-right">
+        <a 
+        asp-controller="Wedding"
+        asp-action="New"
+        class="btn btn-info">
+        New Wedding
+        </a>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

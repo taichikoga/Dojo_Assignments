@@ -1,0 +1,18 @@
+@model Comment
+
+<form asp-action="Create_Comment" asp-controller="Wall" method="POST">
+
+    <input asp-for="UserId" type="hidden">
+    <input asp-for="MessageId" type="hidden">
+    <div class="form-group">
+        <label asp-for="CommentBody"></label>
+        <span
+        class="text-danger font-weight-bold"
+        asp-validation-for="CommentBody"
+        >
+        </span>
+        <input class="form-control" asp-for="CommentBody" />
+    </div>
+
+    <button class="btn btn-info">Post a Comment</button>
+</form>

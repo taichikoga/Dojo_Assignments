@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Details Page";
+}
+@model Wedding
+
+<div class="text-center">
+    <h1 class="display-4">@Model.WedderOne & @Model.WedderTwo's Wedding</h1>
+    <h2 class="display-6">Date: @Model.Date.ToString("dddd, dd MMMM yyyy")</h2>
+    <table class="table">
+        <tr>
+            <th scope="col">Guests</th>
+        </tr>
+            @foreach (var wedding in Model.Attendees)
+            {
+                if (wedding.IsRSVPed == true)
+                {
+                    <tr>
+                        <td>
+                            @wedding.User.FirstName @wedding.User.LastName
+                        </td>
+                    </tr>
+                }
+            }
+    </table>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

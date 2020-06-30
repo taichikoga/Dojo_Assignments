@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Dish>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CRUDelicious</h1>
+    <div class="main d-flex justify-content-around">
+        <div class="left">
+            <h4>Check out some recent dishes!</h4>
+            @foreach (Dish dish in Model){
+                <p><a href="@dish.DishId">@dish.Name</a> by @dish.Chef</p>
+            }
+        </div>
+        <div class="right">
+            <a href="new">Add a Dish</a>
+        </div>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

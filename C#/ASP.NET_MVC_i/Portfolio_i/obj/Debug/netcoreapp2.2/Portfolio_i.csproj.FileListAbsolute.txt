@@ -1,0 +1,16 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\bin\Debug\netcoreapp2.2\Portfolio_i.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\bin\Debug\netcoreapp2.2\Portfolio_i.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\bin\Debug\netcoreapp2.2\Portfolio_i.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\bin\Debug\netcoreapp2.2\Portfolio_i.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\bin\Debug\netcoreapp2.2\Portfolio_i.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.RazorAssemblyInfo.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.RazorAssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.RazorTargetAssemblyInfo.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\bin\Debug\netcoreapp2.2\Portfolio_i.Views.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\ASP.NET_MVC_i\Portfolio_i\obj\Debug\netcoreapp2.2\Portfolio_i.csproj.CopyComplete

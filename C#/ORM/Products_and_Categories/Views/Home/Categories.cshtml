@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Products Page";
+    Category newCategory = new Category();
+}
+@model List<Category>
+
+<div class="text-center">
+    <div class="header">
+        <a href="/products">Products</a> | 
+        <a href="/categories">Categories</a>
+    </div>
+    <div class="main">
+        <div class="main-left">
+            <partial name="_NewCategoryPartial.cshtml" model="newCategory"/>
+        </div>
+        <div class="main-right">
+            <h2>Existing Categories</h2>
+            @foreach (var category in Model)
+            {
+                <p><a href="categories/@category.CategoryId">@category.Name</a></p>
+            }
+        </div>
+    </div>
+</div>

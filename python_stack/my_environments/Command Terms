@@ -1,0 +1,19 @@
+Command Terms
+
+pip list: returns the list of packages in the current environment.
+
+deactivate: deactivates the current environment.
+
+souce/call: activates the specified environment.
+
+pip install: installs specified packge.
+
+pip freezeL outpus installed packaged in a requirements format.
+
+pip freeze > requirements.txt creates a text file with the required packages.
+
+pip uninstall: uninstalls specified package.
+
+pip show: shows information about the installed package.
+
+pip search: searches for packages.

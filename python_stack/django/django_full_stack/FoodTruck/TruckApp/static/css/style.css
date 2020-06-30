@@ -1,0 +1,13 @@
+.truck-icon {
+    width: 75px;
+    height: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+.reviews {
+    height: 300px;
+    overflow: auto;
+}

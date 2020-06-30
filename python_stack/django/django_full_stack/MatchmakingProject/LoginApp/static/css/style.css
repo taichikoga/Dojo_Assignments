@@ -1,0 +1,37 @@
+h1, h2 {
+    color: black;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+body {
+    background-color: #3C5A99;
+}
+
+.form-group {
+    text-align: center;
+    color: black;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.header {
+    height: 100px;
+}
+
+.col {
+    background-color: #E9EBEE;
+    border-radius: 20px;
+    padding: 15px;
+    margin-left: 30px;
+}
+
+.col-4 {
+    background-color: #E9EBEE;
+    color: black;
+    border-radius: 20px;
+}
+
+#viewlobby {
+    background-color: aqua;
+}

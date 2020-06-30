@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Chefs Page";
+}
+@model List<User>
+
+<div class="text-center">
+    <h1 class="display-4">Chefs Home</h1>
+    <div class="header">
+        <div class="nav">
+            <a href="/">Chefs</a>
+            <a href="Dish">Dishes</a>
+        </div>
+        <a href="newuserpage">Add a Chef</a>
+    </div>
+    <div class="main">
+        <h2>Check out our roster of Chefs!</h2>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th># of Dishes</th>
+                </tr>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.FirstName @user.LastName</td>
+                        <td>
+                            @{
+                                var age = DateTime.Today.Year - user.Birthday.Year;
+                                @age
+                            }
+                        </td>
+                        <td>@user.Dishes.Count</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

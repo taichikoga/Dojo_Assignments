@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Trucks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+                <h1>Welcome to the Food Trucks!</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Dashboard
+            </div>
+            <div class="col-sm-4">
+                <a href="/trucks/new">New Truck</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/logout">Log Out</a>
+            </div>
+        </div>
+        <div class="row">
+            {% for truck in all_trucks %}
+            <div class="row col-sm-12">
+                <div class="col-sm-3">
+                    <img class="truck-icon" src="https://image.flaticon.com/icons/svg/31/31520.svg" alt="Truck Icon">
+                </div>
+                <div class="col-sm-5">
+                    <div class="row">
+                        <h3>{{truck.name}}</h3>
+                    </div>
+                    <div class="row">
+                        <p>Style: {{truck.style}}</p>
+                    </div>
+                    <div class="row">
+                        <p>Average Rating: {{truck.avg_rating|floatformat:2}} </p>
+                    </div>
+                    <div class="row">
+                        <p>Favorited: {{ truck.favorited_by.all|length }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <a href="/trucks/{{truck.id}}"><button class="col-sm-3 btn btn-primary">Review</button></a>
+                    {% if truck.owner.id == request.session.user_id %}
+                    <a href="/trucks/{{truck.id}}/edit"><button class="col-sm-3 btn btn-secondary">Edit</button></a>
+                    <a href="/trucks/{{truck.id}}/delete"><button class="col-sm-3 btn btn-secondary">Delete</button></a>
+                    {% elif logged_user not in truck.favorited_by.all %}
+                    <a href="/trucks/{{truck.id}}/favorite"><button class="col-sm-3 btn btn-secondary">Favorite</button></a>
+                    {% endif %}
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Account Page";
+    Transaction newTransaction = new Transaction();
+}
+@model List<Transaction>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Context.Session.GetString("FullName")</h1>
+    <div class="text-right">
+        <a href="logout">Logout</a>
+    </div>
+    <div class="text-right">
+        <p>Current balance: @Context.Session.GetInt32("CurrentBalance")</p>
+    </div>
+
+    <partial name="_FormPartial" model="newTransaction"/>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+            @foreach (var transaction in Model)
+            {
+                <tr>
+                    <td>@transaction.TransactionId</td>
+                    <td>@transaction.Amount</td>
+                    <td>@transaction.CreatedAt</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

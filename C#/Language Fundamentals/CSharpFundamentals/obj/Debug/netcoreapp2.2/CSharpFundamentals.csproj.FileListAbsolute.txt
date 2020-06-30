@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\obj\Debug\netcoreapp2.2\CSharpFundamentals.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\obj\Debug\netcoreapp2.2\CSharpFundamentals.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\obj\Debug\netcoreapp2.2\CSharpFundamentals.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\obj\Debug\netcoreapp2.2\CSharpFundamentals.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\bin\Debug\netcoreapp2.2\CSharpFundamentals.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\bin\Debug\netcoreapp2.2\CSharpFundamentals.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\bin\Debug\netcoreapp2.2\CSharpFundamentals.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\bin\Debug\netcoreapp2.2\CSharpFundamentals.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\bin\Debug\netcoreapp2.2\CSharpFundamentals.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\obj\Debug\netcoreapp2.2\CSharpFundamentals.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\CSharpFundamentals\obj\Debug\netcoreapp2.2\CSharpFundamentals.pdb

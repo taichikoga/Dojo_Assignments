@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\bin\Debug\netcoreapp2.2\dictionaries.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\bin\Debug\netcoreapp2.2\dictionaries.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\bin\Debug\netcoreapp2.2\dictionaries.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\bin\Debug\netcoreapp2.2\dictionaries.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\bin\Debug\netcoreapp2.2\dictionaries.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\obj\Debug\netcoreapp2.2\dictionaries.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\obj\Debug\netcoreapp2.2\dictionaries.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\obj\Debug\netcoreapp2.2\dictionaries.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\obj\Debug\netcoreapp2.2\dictionaries.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\obj\Debug\netcoreapp2.2\dictionaries.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\dictionaries\obj\Debug\netcoreapp2.2\dictionaries.pdb

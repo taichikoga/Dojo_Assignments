@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\obj\Debug\netcoreapp2.2\OopExample.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\obj\Debug\netcoreapp2.2\OopExample.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\obj\Debug\netcoreapp2.2\OopExample.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\obj\Debug\netcoreapp2.2\OopExample.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\bin\Debug\netcoreapp2.2\OopExample.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\bin\Debug\netcoreapp2.2\OopExample.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\bin\Debug\netcoreapp2.2\OopExample.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\bin\Debug\netcoreapp2.2\OopExample.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\bin\Debug\netcoreapp2.2\OopExample.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\obj\Debug\netcoreapp2.2\OopExample.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\OopExample\obj\Debug\netcoreapp2.2\OopExample.pdb

@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Details Page";
+}
+@model Exercise
+
+<div class="text-left">
+    <div class="header">
+        <h1 class="display-4 d-inline">@Model.Title</h1>
+        <a class="text-right">
+        @{
+            bool alreadyRSVPed = Model.Participants.Any(participate => participate.UserId == Context.Session.GetInt32("UserId") && participate.IsParticipating);
+            bool haveNotRSVPED = Model.Participants.Any(participate => participate.UserId == Context.Session.GetInt32("UserId") && participate.IsParticipating == false);
+            if (Model.Coordinator.UserId == @Context.Session.GetInt32("UserId"))
+            {
+                <form
+                    method="POST"
+                    asp-controller="Center"
+                    asp-action="Delete"
+                    asp-route-exerciseId="@Model.ExerciseId"
+                    class="d-inline"
+                >
+                    <button class="text-danger">Delete</button>
+                </form>
+            }
+            else
+            {
+                if (alreadyRSVPed == false)
+                {
+                    <form
+                        method="POST"
+                        asp-controller="Center"
+                        asp-action="RSVP"
+                        asp-route-IsParticipating="@true"
+                        asp-route-exerciseId="@Model.ExerciseId"
+                        asp-route-userId="@Context.Session.GetInt32("UserId")"
+                        class="d-inline"
+                    >
+                        <button class="text-success">Join</button>
+                    </form>
+                }
+                else if (haveNotRSVPED == false)
+                {
+                    <form
+                        method="POST"
+                        asp-controller="Center"
+                        asp-action="RSVP"
+                        asp-route-IsParticipating="@false"
+                        asp-route-exerciseId="@Model.ExerciseId"
+                        asp-route-userId="@Context.Session.GetInt32("UserId")"
+                        class="d-inline"
+                    >
+                        <button class="text-warning">Leave</button>
+                    </form
+                    >
+                }
+            }
+        }
+        </a>
+    </div>
+    <p>Event Coordinator: @Model.Coordinator.Name</p>
+    <p>Description: @Model.Description</p>
+    <p>Participants: </p>
+            @foreach (var exercise in Model.Participants)
+            {
+                if (exercise.IsParticipating == true)
+                {
+                    <ul>
+                        <li>@exercise.User.Name</li>
+                    </ul>
+                }
+            }
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

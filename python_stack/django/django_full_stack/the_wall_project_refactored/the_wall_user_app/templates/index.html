@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="registration">
+        <h2>Registration</h2>
+        <form action="/create" method="POST">
+            {% csrf_token %}
+            {% for message in messages %}
+                {% if message.extra_tags == "first_name" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="first_name">First Name: </label>
+            <input type="text" name="first_name">
+            {% for message in messages %}
+                {% if message.extra_tags == "last_name" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="last_name">Last Name: </label>
+            <input type="text" name="last_name">
+            {% for message in messages %}
+                {% if message.extra_tags == "email" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="email">Email: </label>
+            <input type="text" name="email">
+            {% for message in messages %}
+                {% if message.extra_tags == "password" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="password">Password: </label>
+            <input type="password" name="password">
+            {% for message in messages %}
+                {% if message.extra_tags == "confirm_pw" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="confirm_pw">Confirm PW: </label>
+            <input type="password" name="confirm_pw">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <div class="login">
+        <h2>Log In</h2>
+        <form action="/login" method="POST">
+            {% csrf_token %}
+            {% for message in messages %}
+                {% if message.extra_tags == "email" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="email">Email: </label>
+            <input type="text"name = email>
+            {% for message in messages %}
+                {% if message.extra_tags == "password" %}
+                <span>{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <label for="password">Password: </label>
+            <input type="text"name = password>
+            <input type="submit" value="Log In">
+        </form>
+    </div>
+</body>
+</html>

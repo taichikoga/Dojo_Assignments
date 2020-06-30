@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "New User";
+}
+@model User
+
+<div class="text-center">
+    <h1 class="display-4">Add a Chef!</h1>
+    <form asp-action="Register" asp-controller="Home" method="POST">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <span
+        class="text-danger font-weight-bold"
+        asp-validation-for="FirstName"
+        >
+        </span>
+        <input class="form-control" asp-for="FirstName" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <span
+        class="text-danger font-weight-bold"
+        asp-validation-for="LastName"
+        >
+        </span>
+        <input class="form-control" asp-for="LastName" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <span
+        class="text-danger font-weight-bold"
+        asp-validation-for="Birthday"
+        >
+        </span>
+        <input class="form-control" asp-for="Birthday" />
+    </div>
+
+    <button class="btn btn-info">Add a Chef!</button>
+    </form>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

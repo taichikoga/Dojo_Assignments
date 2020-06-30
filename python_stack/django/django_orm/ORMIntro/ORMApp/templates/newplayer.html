@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Player</h1>
+        <a href="/">Go Home</a>
+
+        <div class="row">
+            <div class="col-sm-8">
+
+                <form action="/player/create" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-4" for="name">Player Name:</label>
+                        <input type="text" name="name" class="col-sm-8 form-control">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4" for="jersey_num">Jersey Number:</label>
+                        <input type="number" name="jersey_num" class="col-sm-8 form-control">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4" for="height">Player Height:</label>
+                        <input type="text" name="height" class="col-sm-8 form-control">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4" for="retired">Retired:</label>
+                        <input type="checkbox" name="retired" class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4" for="first_game">Date of First Game:</label>
+                        <input type="date" name="first_game" class="col-sm-8 form-control">
+                    </div>
+                    <div class="form-group row">
+                        <label for="bio" class="col-sm-4">Bio: </label>
+                        <textarea name="bio" class="col-sm-8 form-control" rows="10"></textarea>
+                    </div>
+                    <div class="form-group row">
+                        <input type="submit" value="Submit!" class="col-sm-4 btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

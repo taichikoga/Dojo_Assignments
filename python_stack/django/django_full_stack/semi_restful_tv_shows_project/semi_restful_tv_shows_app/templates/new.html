@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a New Show</h1>
+    <form action="/shows/create" method="POST">
+        {% csrf_token %}
+        {% for message in messages %}
+        {% if message.extra_tags == "title" %}
+        <span>{{message}}</span>
+        {% endif %}
+        {% endfor %}
+        <label for="title">Title: </label>
+        <input type="text" name="title">
+        {% for message in messages %}
+        {% if message.extra_tags == "network" %}
+        <span>{{message}}</span>
+        {% endif %}
+        {% endfor %}
+        <label for="network">Network: </label>
+        <input type="text" name="network">
+        {% for message in messages %}
+        {% if message.extra_tags == "release_date" %}
+        <span>{{message}}</span>
+        {% endif %}
+        {% endfor %}
+        <label for="release_date">Release Date: </label>
+        <input type="date" name="release_date">
+        {% for message in messages %}
+        {% if message.extra_tags == "description" %}
+        <span>{{message}}</span>
+        {% endif %}
+        {% endfor %}
+        <label for="description">Description: </label>
+        <input type="text" name="description">
+        <input type="submit" value="Create">
+    </form>
+    <a href="/shows">
+        <h3>Go Back</h3>
+    </a>
+</body>
+</html>

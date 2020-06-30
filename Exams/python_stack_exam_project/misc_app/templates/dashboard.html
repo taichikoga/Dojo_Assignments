@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h3>Welcome {{ current_user.first_name }} {{ current_user.last_name }}</h3>
+            </div>
+            <div class="header-right">
+                <a href="/myaccount/{{ current_user.id }}">Edit My Account</a>
+                <form action="/logout" method="get">
+                    <button type="submit">Logout</button>
+                </form>
+            </div>
+            <div class="main">
+                <div class="main-left">
+                    <h2>Quotes</h2>
+                    {% for quote in all_the_quotes %}
+                    <br>
+                    <p>{{ quote.author }}: "{{ quote.quote }}"</p>
+                    Posted by: 
+                    <a href="/quotes/user/{{ quote.posted_by.id }}">
+                        {{ quote.posted_by.first_name }} {{ quote.posted_by.last_name }}
+                    </a>
+                    {% if quote.posted_by.id == request.session.user_id %}
+                        <a href="/quotes/delete/{{ quote.id }}">Delete</a>
+                    {% endif %}
+                    <br>
+                    {% endfor %}
+                </div>
+                <div class="main-right">
+                    <h2>Add a Quote!</h2>
+                    <form action="/quotes/add" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {% for message in messages %}
+                                {% if message.extra_tags == "author" %}
+                                    <span class="text-danger">{{message}}</span>
+                                {% endif %}
+                            {% endfor %}
+                            <label for="author">Author: </label>
+                            <input type="text" name="author">
+                        </div>
+                        <div class="form-group">
+                            {% for message in messages %}
+                                {% if message.extra_tags == "quote" %}
+                                    <span class="text-danger">{{message}}</span>
+                                {% endif %}
+                            {% endfor %}
+                            <label for="quote">Quote: </label>
+                            <input type="text" name="quote">
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Buddy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between" style="margin-top:30px">
+            <h5>Welcome {{ loggedinUser.first_name }} {{ loggedinUser.last_name }}</h5>
+            <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+        </div>
+        <div class="row justify-content-between" style="margin-top:30px; border:solid black 3px">
+            <div class="col" style="margin-top:30px">
+                <h4>Lobby Users</h4>
+                {% for user in lobby.users.all %}
+                    {% if user.id != request.session.loggedinId %}
+                        <p>{{ user.first_name }} | <a href="/dashboard/{{ user.id }}/add">Add Friend</a></p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col" style="margin-top:30px">
+                <p>Competitiveness: {{ lobby.competitiveness }}</p>
+                <p>Preferred Game Type: {{ lobby.preferred_game_type }}</p>
+                <p>Lobby Size: {{ lobby.lobby_size }}</p>
+                <p>Updated At: {{ lobby.updated_at }}</p>
+                <p>Description: {{ lobby.description }}</p>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="header">
+        <p>Happiness: @ViewBag.Happiness</p>
+        <p>Fullness: @ViewBag.Fullness</p>
+        <p>Energy: @ViewBag.Energy</p>
+        <p>Meals: @ViewBag.Meals</p>
+    </div>
+    <div class="main">
+        <p>Message: @ViewBag.Message</p>
+    </div>
+    @{
+        if (ViewBag.Happiness >= 100 & ViewBag.Fullness >= 100 && ViewBag.Energy >= 100)
+        {
+            <div class="bottom">
+                <a href="restart">Restart?</a>
+            </div>
+        }
+        else if (ViewBag.Happiness <= 0 || ViewBag.Fullness <= 0)
+        {
+            <div class="bottom">
+                <a href="restart">Restart?</a>
+            </div>
+        }
+        else
+        {
+            <div class="bottom">
+                <a href="feed">Feed</a>
+                <a href="play">Play</a>
+                <a href="work">Work</a>
+                <a href="sleep">Sleep</a>
+            </div>
+        }
+    }
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

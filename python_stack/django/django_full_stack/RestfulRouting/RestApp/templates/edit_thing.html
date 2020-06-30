@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit A Thing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row"><a href="/things">Go Home</a></div>
+        <h2>So you wanna chane a thing?</h2>
+        <form action="/things/{{thing_to_edit.id}}/update" method="post">
+            {% csrf_token %}
+            <div class="form-group row">
+                <label for="field_1" class="col-sm-4">Field 1:</label>
+                <input type="text" name="field_1" class="col-sm-8 form-control" value="{{thing_to_edit.field_1}}">
+            </div>
+            <div class="form-group row">
+                <label for="field_2" class="col-sm-4">Field 2:</label>
+                <input type="text" name="field_2" class="col-sm-8 form-control" value="{{thing_to_edit.field_2}}">
+            </div>
+            <div class="form-group row">
+                <label for="field_3" class="col-sm-4">Field 1:</label>
+                <input type="text" name="field_3" class="col-sm-8 form-control" value="{{thing_to_edit.field_3}}">
+            </div>
+            <div class="form-group row">
+                <input type="submit" value="Update" class="col-sm-4 btn btn-primary">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

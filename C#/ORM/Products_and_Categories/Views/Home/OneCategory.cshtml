@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Category Page";
+    Association newAssociation = new Association();
+}
+@model Category
+
+<div class="text-center">
+    <div class="header">
+        <a href="/products">Products</a> | 
+        <a href="/categories">Categories</a>
+    </div>
+    <div class="main">
+        <h1>@Model.Name</h1>
+        <div class="main-left">
+            <partial name="_AddCategoryToProductPartial.cshtml" model="@newAssociation"/>
+        </div>
+        <div class="main-right">
+            <h2>Products:</h2>
+            @foreach (var category in Model.ProductInCategory)
+            {
+                <p>@category.Product.Name</p>
+            }
+        </div>
+    </div>
+</div>

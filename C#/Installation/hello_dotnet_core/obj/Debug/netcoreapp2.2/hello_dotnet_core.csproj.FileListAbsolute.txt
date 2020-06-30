@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\bin\Debug\netcoreapp2.2\hello_dotnet_core.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\bin\Debug\netcoreapp2.2\hello_dotnet_core.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\bin\Debug\netcoreapp2.2\hello_dotnet_core.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\bin\Debug\netcoreapp2.2\hello_dotnet_core.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\bin\Debug\netcoreapp2.2\hello_dotnet_core.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\obj\Debug\netcoreapp2.2\hello_dotnet_core.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\obj\Debug\netcoreapp2.2\hello_dotnet_core.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\obj\Debug\netcoreapp2.2\hello_dotnet_core.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\obj\Debug\netcoreapp2.2\hello_dotnet_core.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\obj\Debug\netcoreapp2.2\hello_dotnet_core.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Installation\hello_dotnet_core\obj\Debug\netcoreapp2.2\hello_dotnet_core.pdb

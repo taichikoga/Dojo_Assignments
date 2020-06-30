@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\bin\Debug\netcoreapp2.2\boxing_unboxing.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\bin\Debug\netcoreapp2.2\boxing_unboxing.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\bin\Debug\netcoreapp2.2\boxing_unboxing.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\bin\Debug\netcoreapp2.2\boxing_unboxing.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\bin\Debug\netcoreapp2.2\boxing_unboxing.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\obj\Debug\netcoreapp2.2\boxing_unboxing.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\obj\Debug\netcoreapp2.2\boxing_unboxing.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\obj\Debug\netcoreapp2.2\boxing_unboxing.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\obj\Debug\netcoreapp2.2\boxing_unboxing.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\obj\Debug\netcoreapp2.2\boxing_unboxing.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\Language Fundamentals\boxing_unboxing\obj\Debug\netcoreapp2.2\boxing_unboxing.pdb

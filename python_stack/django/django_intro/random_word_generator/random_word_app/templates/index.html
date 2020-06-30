@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Index Page</h1>
+    <h3>Random Word (attempt #{{ request.session.counter }})</h3>
+        {% csrf_token %}
+        <a href="/addtocount"><button type="submit">Generate</button></a>
+        <a href="/resetcount"><button type="submit">Reset</button></a>
+</body>
+</html>

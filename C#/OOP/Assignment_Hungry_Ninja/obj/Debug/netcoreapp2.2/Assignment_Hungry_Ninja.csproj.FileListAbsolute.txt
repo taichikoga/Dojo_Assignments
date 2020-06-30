@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\bin\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\bin\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\bin\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\bin\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\bin\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\obj\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\obj\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\obj\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\obj\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\obj\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Hungry_Ninja\obj\Debug\netcoreapp2.2\Assignment_Hungry_Ninja.pdb

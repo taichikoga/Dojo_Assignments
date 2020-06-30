@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\bin\Debug\netcoreapp2.2\Stacks_and_Queues.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\bin\Debug\netcoreapp2.2\Stacks_and_Queues.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\bin\Debug\netcoreapp2.2\Stacks_and_Queues.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\bin\Debug\netcoreapp2.2\Stacks_and_Queues.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\bin\Debug\netcoreapp2.2\Stacks_and_Queues.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\obj\Debug\netcoreapp2.2\Stacks_and_Queues.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\obj\Debug\netcoreapp2.2\Stacks_and_Queues.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\obj\Debug\netcoreapp2.2\Stacks_and_Queues.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\obj\Debug\netcoreapp2.2\Stacks_and_Queues.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\obj\Debug\netcoreapp2.2\Stacks_and_Queues.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\algos\Stacks_and_Queues\obj\Debug\netcoreapp2.2\Stacks_and_Queues.pdb

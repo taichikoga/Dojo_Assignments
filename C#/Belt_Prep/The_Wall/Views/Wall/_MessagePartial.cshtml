@@ -1,0 +1,16 @@
+@model Message
+
+<form asp-action="Create_Post" asp-controller="Wall" method="POST">
+
+<div class="form-group">
+    <label asp-for="Body"></label>
+    <span
+    class="text-danger font-weight-bold"
+    asp-validation-for="Body"
+    >
+    </span>
+    <input class="form-control" asp-for="Body" />
+</div>
+
+<button class="btn btn-info">Post a Message</button>
+</form>

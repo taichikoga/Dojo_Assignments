@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Details Page";
+}
+@model Dish
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Name</h1>
+    <p>by</p>
+    <h3 class="display-5">@Model.Chef</h3>
+    <p>@Model.Description</p>
+    <p>Calories: @Model.Calories</p>
+    <p>Tastiness: @Model.Tastiness</p>
+    <div class="buttons d-flex justify-content-around">
+        <a href="delete/@Model.DishId">Delete</a>
+        <a href="edit/@Model.DishId">Edit</a>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

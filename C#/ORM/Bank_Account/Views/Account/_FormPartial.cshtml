@@ -1,0 +1,15 @@
+@model Transaction
+
+<form asp-action="DepositWithdraw" asp-controller="Account" method="POST">
+
+    <div class="form-group">
+        <label asp-for="Amount"></label>
+        <span
+        class="text-danger font-weight-bold"
+        asp-validation-for="Amount">
+        </span>
+        <input class="form-control" asp-for="Amount" />
+    </div>
+
+    <button class="btn btn-info">Submit</button>
+</form>

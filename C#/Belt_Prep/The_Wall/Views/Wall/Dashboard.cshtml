@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Message newMessage = new Message();
+}
+@model List<Message>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Context.Session.GetString("FullName"), to The Wall</h1>
+    <br>
+    <div class="top">
+        <partial name="_MessagePartial.cshtml" model="newMessage"/>
+    </div>
+    <br>
+    <div class="text-left main">
+        @foreach (var message in Model)
+        {
+            <div class="post border">
+                <p>@message.Creator.FullName() - @message.CreatedAt.Date</p>
+                <p>@message.Body</p>
+            </div>
+            <div class="comments text-right">
+                @foreach (var comment in message.CommentsOnMessage)
+                {
+                    <p>@comment.User.FullName() - @comment.CreatedAt.Date</p>
+                    <p>@comment.CommentBody</p>
+                }
+            </div>
+            <div class="commentform">
+                @{
+                    Comment newComment = new Comment()
+                    {
+                        UserId = (int)Context.Session.GetInt32("UserId"),
+                        MessageId = message.MessageId
+                    };
+                }
+                <partial name="_CommentPartial.cshtml" model="@newComment"/>
+            </div>
+        }
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

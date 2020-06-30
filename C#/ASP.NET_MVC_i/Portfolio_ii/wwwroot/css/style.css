@@ -1,0 +1,46 @@
+.container{
+    background-color: rosybrown;
+    min-height: 500px;
+    width: 800px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+}
+
+    .header a{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .header h1{
+        text-align: center;
+    }
+
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-main{
+    text-align: center;
+}
+    .home-main img{
+        width: 300px;
+    }
+
+.project_list{
+    text-align: center;
+}
+    .project_detail h3{
+        color: red;
+    }
+        .project_detail img{
+            width: 300px;
+        }
+
+.contact_form{
+    display: block;
+}

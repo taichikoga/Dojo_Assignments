@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Dashboard Page";
+}
+@model List<Exercise>
+
+<div class="text-left">
+    <h1 class="display-4">Dojo Activity Center</h1>
+    <table class="table">
+        <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">Date and Time</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Event Coordinator</th>
+            <th scope="col">No. of Participants</th>
+            <th scope="col">Action</th>
+        </tr>
+        @foreach (Exercise exercise in Model)
+        {
+            if (DateTime.Now < exercise.DateTime)
+            {
+                <tr>
+                    <td scope="row"><a href="/details/@exercise.ExerciseId">@exercise.Title</a></td>
+                    <td scope="row">@exercise.DateTime.ToString("M/d") @@ @exercise.DateTime.ToString("hh:mm tt")</td>
+                    <td scope="row">@exercise.Duration @exercise.UnitOfTime</td>
+                    <td scope="row">@exercise.Coordinator.Name</td>
+                    <td scope="row">@exercise.Participants.Where(attend => attend.IsParticipating == true).ToList().Count</td>
+                    <td scope="row">
+                            @{
+                                bool alreadyRSVPed = exercise.Participants.Any(participate => participate.UserId == Context.Session.GetInt32("UserId") && participate.IsParticipating);
+                                bool haveNotRSVPED = exercise.Participants.Any(participate => participate.UserId == Context.Session.GetInt32("UserId") && participate.IsParticipating == false);
+                                if (exercise.Coordinator.UserId == @Context.Session.GetInt32("UserId"))
+                                {
+                                    <form
+                                        method="POST"
+                                        asp-controller="Center"
+                                        asp-action="Delete"
+                                        asp-route-exerciseId="@exercise.ExerciseId"
+                                    >
+                                        <button class="text-danger">Delete</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    if (alreadyRSVPed == false)
+                                    {
+                                        <form
+                                            method="POST"
+                                            asp-controller="Center"
+                                            asp-action="RSVP"
+                                            asp-route-IsParticipating="@true"
+                                            asp-route-exerciseId="@exercise.ExerciseId"
+                                            asp-route-userId="@Context.Session.GetInt32("UserId")"
+                                        >
+                                            <button class="text-success">Join</button>
+                                        </form>
+                                    }
+                                    else if (haveNotRSVPED == false)
+                                    {
+                                        <form
+                                            method="POST"
+                                            asp-controller="Center"
+                                            asp-action="RSVP"
+                                            asp-route-IsParticipating="@false"
+                                            asp-route-exerciseId="@exercise.ExerciseId"
+                                            asp-route-userId="@Context.Session.GetInt32("UserId")"
+                                        >
+                                            <button class="text-warning">Leave</button>
+                                        </form
+                                        >
+                                    }
+                                }
+                            }
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <div class="text-right">
+        <a 
+        asp-controller="Center"
+        asp-action="New"
+        class="btn btn-info">
+        Add New Activity
+        </a>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

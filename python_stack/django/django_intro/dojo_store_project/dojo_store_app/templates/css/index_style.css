@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: solid 1px pink;
+}
+.container{
+    width: 970px;
+    min-height: 300px;
+}
+.main,
+.info{
+    display: inline-block;
+}

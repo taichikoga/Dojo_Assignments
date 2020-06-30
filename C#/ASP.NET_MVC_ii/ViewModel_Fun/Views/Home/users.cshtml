@@ -1,0 +1,15 @@
+@using ViewModel_Fun.Models
+@model List<Users>
+
+@{
+    ViewData["Title"] = "Users List Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Here are some Users!</h1>
+    @foreach (var user in Model)
+    {
+        <p>@user.Name</p>
+    }
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

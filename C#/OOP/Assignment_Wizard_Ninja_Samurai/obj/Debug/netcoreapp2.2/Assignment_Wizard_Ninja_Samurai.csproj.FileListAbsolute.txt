@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Assignment_Wizard_Ninja_Samurai.pdb

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All The Things</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <a href="/things/new">Add a new thing!</a>
+        </div>
+        <table class="table">
+            <thead>
+                <th>Thing Id</th>
+                <th>Field 1</th>
+                <th>Field 2</th>
+                <th>Field 3</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                {% for thing in all_things %}
+                    <tr>
+                        <td>{{thing.id}}</td>
+                        <td><a href="/things/{{thing.id}}">{{thing.field_1}}</a></td>
+                        <td>{{thing.field_2}}</td>
+                        <td>{{thing.field_3}}</td>
+                        <td><a href="/things/{{thing.id}}/edit">Edit</a>|<a href="/things/{{thing.id}}/delete">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create A Lobby</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between" style="margin-top:30px">
+            <div class="col">
+                <h5>Hello {{ loggedinUser.first_name }} {{ loggedinUser.last_name }}! Create a lobby!</h5>
+            </div>
+            <div class="col">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li class="text-danger">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/dashboard/create_lobby" method="post">
+            {% csrf_token %}
+            <div class="form-group" style="margin-top:30px">
+                <label for="title">Title: 
+                    <input type="text" class="form-control" name="title"> 
+                </label> 
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <label for="competitiveness">Competitiveness: 
+                    <select type="number" name="competitiveness" class="form-control">
+                        <option value="1">Not very</option>
+                        <option value="2">A little</option> 
+                        <option value="3">Somewhat</option>
+                        <option value="4">Very</option>
+                        <option value="5">I scare myself</option>
+                    </select>
+                </label> 
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <label for="preferred_game_type">Preferred Game Type: 
+                    <select type="text" name="preferred_game_type" class="form-control">
+                        <option value="Puzzle/clue Games">Puzzle/clue Games</option>
+                        <option value="Turn-based Strategy">Turn-based Strategy</option> 
+                        <option value="Standard Card Deck Game">Standard Card Deck Game</option>
+                    </select>
+                </label> 
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <label for="lobby_size">Lobby Size: 
+                    <input type="number" name="lobby_size" class="form-control">
+                </label> 
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <label for="description">Description: 
+                    <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+                </label>
+            </div>
+            <div class="row justify-content-center" style="margin:30px">
+                <button type="submit" class="btn btn-primary btn-lg">Create A Lobby</button>
+    </div>
+</body>
+</html>

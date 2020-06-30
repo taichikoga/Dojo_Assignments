@@ -1,0 +1,11 @@
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\obj\Debug\netcoreapp2.2\Assignment_Human.csprojAssemblyReference.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\obj\Debug\netcoreapp2.2\Assignment_Human.csproj.CoreCompileInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\obj\Debug\netcoreapp2.2\Assignment_Human.AssemblyInfoInputs.cache
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\obj\Debug\netcoreapp2.2\Assignment_Human.AssemblyInfo.cs
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\bin\Debug\netcoreapp2.2\Assignment_Human.deps.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\bin\Debug\netcoreapp2.2\Assignment_Human.runtimeconfig.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\bin\Debug\netcoreapp2.2\Assignment_Human.runtimeconfig.dev.json
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\bin\Debug\netcoreapp2.2\Assignment_Human.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\bin\Debug\netcoreapp2.2\Assignment_Human.pdb
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\obj\Debug\netcoreapp2.2\Assignment_Human.dll
+C:\Users\Taichi\Desktop\Dojo_Assignments\C#\OOP\Assignment_Human\obj\Debug\netcoreapp2.2\Assignment_Human.pdb

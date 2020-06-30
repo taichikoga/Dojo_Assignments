@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h4>Success! Welcome, {{ User_registration_info.first_name }}</h4>
+        <a href="/logout">Log Out</a>
+    </div>
+    <div class="main">
+        <div class="main-top">
+            <form action="/success/{{ User_registration_info.id }}/create_message" method="POST">
+                {% csrf_token %}
+                <label for="message">Post a message</label>
+                <textarea name="message" cols="30" rows="5"></textarea>
+                <input type="submit" value="Post a message">
+            </form>
+        </div>
+        <div class="main-bottom">
+        {% for message in all_the_messages %}
+            <h4>{{ message.user.first_name }} {{ message.user.last_name }} - {{ message.created_at }}</h4>
+            <p>{{ message.message }}</p>
+            {% for comment in message.comments_message.all %}
+                <p>{{ comment.comment }}</p>
+            {% endfor %}
+            <form action="/success/{{ User_registration_info.id }}/{{ message.id }}/create_comment" method="POST">
+                {% csrf_token %}
+                <label for="comment">Post a Comment</label>
+                <input type="text" name="comment">
+                <input type="submit" value="Post a comment">
+            </form>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

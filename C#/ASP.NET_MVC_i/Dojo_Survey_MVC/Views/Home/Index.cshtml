@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Dojo Survey";
+}
+@model Survey
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Dojo Survey</h1>
+        @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+
+        <div class="main">
+            <form asp-action="survey" asp-controller="Home" method ="POST">
+                <div class="form-group row justify-content-between">
+                    <span asp-validation-for="Name"></span>
+                    <label asp-for="Name" class="col-2 col-form-label">Your Name: </label>
+                    <div>
+                        <input type="text" asp-for="Name" class="form-control">
+                    </div>
+                </div>
+                <div  class="form-group row justify-content-between">
+                    <span asp-validation-for="Location"></span>
+                    <label asp-for="Location" class="col-2 col-form-label">Dojo Location: </label>
+                    <div>
+                        <select type="text" asp-for="Location" class="form-control">
+                            <option value="San Jose">San Jose</option>
+                            <option value="Burbank">Burbank</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Orange County">Orange County</option>
+                        </select>
+                    </div>
+                </div>
+                <div  class="form-group row justify-content-between">
+                    <span asp-validation-for="Language"></span>
+                    <label asp-for="Language" class="col-2 col-form-label">Favorite Language: </label>
+                    <div>
+                        <select type="text" asp-for="Language" class="form-control">
+                            <option value="C#">C#</option>
+                            <option value="Python">Python</option>
+                            <option value="Mern">Mern</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-between">
+                    <span asp-validation-for="Comment"></span>
+                    <label asp-for="Comment" class="col-2 col-form-label">Comment (optional): </label>
+                    <div>
+                        <textarea asp-for="Comment" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn col-2">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

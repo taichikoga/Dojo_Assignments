@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "Edit Page";
+}
+@model Dish
+
+<div class="text-center">
+    <h1 class="display-4">Edit @Model.Name</h1>
+    <div class="text-left">
+        <a href="home">Home</a>
+    </div>
+    <div class="main">
+        <form asp-action="Update" asp-route-id="@Model.DishId" asp-controller="Home" method="POST" >
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <span
+                class="text-danger font-weight-bold"
+                asp-validation-for="Name">
+                </span>
+                <input class="form-control" asp-for="Name" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Chef"></label>
+                <span
+                class="text-danger font-weight-bold"
+                asp-validation-for="Chef"
+                >
+                </span>
+                <input class="form-control" asp-for="Chef" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Tastiness"></label>
+                <span
+                class="text-danger font-weight-bold"
+                asp-validation-for="Tastiness"
+                >
+                </span>
+                <select class="form-control" asp-for="Tastiness">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Calories"></label>
+                <span
+                class="text-danger font-weight-bold"
+                asp-validation-for="Calories"
+                >
+                </span>
+                <input class="form-control" asp-for="Calories" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <span
+                class="text-danger font-weight-bold"
+                asp-validation-for="Description"
+                >
+                </span>
+                <input class="form-control" asp-for="Description" />
+            </div>
+
+            <button class="btn btn-info">Update Dish</button>
+        </form>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

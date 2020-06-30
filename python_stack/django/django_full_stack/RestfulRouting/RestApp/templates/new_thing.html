@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A New Thing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row"><a href="/things">Go Home</a></div>
+        <h2>So you wanna make a new thing?</h2>
+
+        
+
+        <form action="/things/create" method="post">
+            {% csrf_token %}
+            <div class="form-group row">
+                {% for message in messages %}
+                {% if message.extra_tags == "field_1" %}
+                <span class="col-sm-12 text-danger">{{message}}</span>
+                {% endif %}
+                {% endfor %}
+                <label for="field_1" class="col-sm-4">Field 1:</label>
+                <input type="text" name="field_1" class="col-sm-8 form-control">
+            </div>
+            <div class="form-group row">
+                {% for message in messages %}
+                {% if message.extra_tags == "field_2" %}
+                <span class="col-sm-12 text-danger">{{message}}</span>
+                {% endif %}
+                {% endfor %}
+                <label for="field_2" class="col-sm-4">Field 2:</label>
+                <input type="text" name="field_2" class="col-sm-8 form-control">
+            </div>
+            <div class="form-group row">
+                {% for message in messages %}
+                {% if message.extra_tags == "field_3" %}
+                <span class="col-sm-12 text-danger">{{message}}</span>
+                {% endif %}
+                {% endfor %}
+                <label for="field_3" class="col-sm-4">Field 1:</label>
+                <input type="text" name="field_3" class="col-sm-8 form-control">
+            </div>
+            <div class="form-group row">
+                <input type="submit" value="Submit" class="col-sm-4 btn btn-primary">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

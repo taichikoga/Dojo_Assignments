@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchmaking Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between" style="margin-top:30px">
+            <div class="col">
+                <h5>Welcome {{ loggedinUser.first_name }} {{ loggedinUser.last_name }}!</h5>
+            </div>
+            <div class="col">
+                <a href="/logout">Logout</a> | <a href="add_lobby">Create A New Lobby!</a>
+            </div>
+        </div>
+        <div class="row justify-content-between" style="margin-top:30px">
+            <div class="col-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Lobby</th>
+                            <th scope="col">Occupied By</th> 
+                            <th scope="col">Max Lobby Size</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for lobby in all_lobbies %}
+                        <tr>
+                            <td>{{ lobby.id }} {{ lobby.title }}</td>
+                            <td>{% for one in lobby.users.all %} {{ one.first_name }}, {% endfor %}</td>
+                            <td>{{ lobby.lobby_size }}</td>
+                            <td><a class="btn btn-primary" href="/dashboard/{{lobby.id}}/join" role="button">Join</a> |
+                                <a class="btn btn-info" href="/dashboard/{{lobby.id}}/view" role="button">View</a> |
+                                <a class="btn btn-danger" href="/dashboard/{{lobby.id}}/leave" role="button">Leave</a>
+                            </td>
+                        {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <h3>Friends List</h3>
+                <!-- <p>{{ loggedinUser.friend.all }}</p> -->
+                {% for user in all_friends %}
+                    <!-- {% for friend in user.friend.all %} -->
+                        <ul>
+                            <li style="font-family:Georgia">{{ user.first_name }} {{ user.last_name }}</li>
+                        </ul>
+                    <!-- {% endfor %} -->
+                {% endfor %}
+        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\Taichi\\Desktop\\Dojo_Assignments\\C#\\Belt_Prep\\FoodTruckDemo\\FoodTruckDemo.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\Taichi\\Desktop\\Dojo_Assignments\\C#\\Belt_Prep\\FoodTruckDemo\\FoodTruckDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Taichi\\Desktop\\Dojo_Assignments\\C#\\Belt_Prep\\FoodTruckDemo\\FoodTruckDemo.csproj",
+        "projectName": "FoodTruckDemo",
+        "projectPath": "c:\\Users\\Taichi\\Desktop\\Dojo_Assignments\\C#\\Belt_Prep\\FoodTruckDemo\\FoodTruckDemo.csproj",
+        "packagesPath": "C:\\Users\\Taichi\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Taichi\\Desktop\\Dojo_Assignments\\C#\\Belt_Prep\\FoodTruckDemo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Taichi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

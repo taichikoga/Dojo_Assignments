@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Products Page";
+    Product newProduct = new Product();
+}
+@model List<Product>
+
+<div class="text-center">
+    <div class="header">
+        <a href="/products">Products</a> | 
+        <a href="/categories">Categories</a>
+    </div>
+    <div class="main">
+        <div class="main-left">
+            <partial name="_NewProductPartial.cshtml" model="newProduct"/>
+        </div>
+        <div class="main-right">
+            <h2>Existing Products</h2>
+            @foreach (var product in Model)
+            {
+                <a 
+                asp-controller="Home"
+                asp-action="ProductDetail"
+                asp-route-productId="@product.ProductId"
+                class="btn btn-info">
+                @product.Name
+                </a>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ninja Gold Game</h1>
+        <div>
+            Your Gold {{ farm_gold_from_form }}
+        </div>
+        <div>
+            <form action="/process_money" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="location" value="farm">
+                <button type="submit">Find Gold</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Truck</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Add A Truck</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="/trucks">Dashboard</a>
+            </div>
+            <div class="col-sm-4">
+                New Truck
+            </div>
+            <div class="col-sm-4">
+                <a href="/logout">Log Out</a>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col-sm-8" action="/trucks" method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                    {% for message in messages %}
+                    {% if message.extra_tags == "name" %}
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-8">
+                        <span class="text-danger">{{message}}</span>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <label class="col-sm-4" for="name">Name: </label>
+                    <input type="text" name="name" class="col-sm-8 form-control">
+                </div>
+                <div class="form-group row">
+                    {% for message in messages %}
+                    {% if message.extra_tags == "style" %}
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-8">
+                        <span class="text-danger">{{message}}</span>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <label class="col-sm-4" for="style">Style: </label>
+                    <input type="text" name="style" class="col-sm-8 form-control">
+                </div>
+                <div class="form-group row">
+                    {% for message in messages %}
+                    {% if message.extra_tags == "description" %}
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-8">
+                        <span class="text-danger">{{message}}</span>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    <label class="col-sm-4" for="description">Description: </label>
+                    <textarea name="description" class="col-sm-8 form-control" rows="4"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-4"></div>
+                    <input type="submit" value="Submit" class="col-sm-4 btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{one_truck.name}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>{{one_truck.name}}'s Page</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="/trucks">Dashboard</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/trucks/new">New Truck</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/logout">Log Out</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row col-sm-12">
+                <div class="col-sm-4">
+                    <img class="truck-icon" src="https://image.flaticon.com/icons/svg/31/31520.svg" alt="Truck Icon">
+                </div>
+                <div class="col-sm-8">
+                    <div class="col-sm-12">
+                        <h4>{{one_truck.name}}</h4>
+                    </div>
+                    <div class="col-sm-12">    
+                        <p>Style: {{one_truck.style}}</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p>Description: {{one_truck.description}}</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p>Average Rating: {{one_truck.avg_rating}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-sm-12 reviews">
+                {% for review in one_truck.reviews.all %}
+                <div class="row col-sm-12">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="col-sm-3">
+                            <p>{{ review.reviewer.first_name }} {{ review.reviewer.last_name }}</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <p>{{ review.text }}</p>
+                            </div>
+                            <div class="row">
+                                <p>Rating: {{ review.rating }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <form class="row col-sm-12" action="/trucks/{{one_truck.id}}/review" method="post">
+                {% csrf_token %}
+                <div class="col-sm-7">
+                    <div class="form-group row">
+                        {% for message in messages %}
+                        {% if message.extra_tags == "text" %}
+                        <div class="col-sm-12">
+                            <span class="text-danger">{{ message }}</span>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                        <label for="text" class="col-sm-4">Review: </label>
+                        <textarea name="text" class="col-sm-8 form-control" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-group row">
+                        {% for message in messages %}
+                        {% if message.extra_tags == "rating" %}
+                        <div class="col-sm-12">
+                            <span class="text-danger">{{ message }}</span>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                        <label for="rating" class="col-sm-4">Rating: </label>
+                        <select name="rating" class="col-sm-8 form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <a href="/trucks"><button type="button" class="btn btn-secondary">Cancel</button></a>
+                        </div>
+                        <input type="submit" value="Submit" class="col-sm-4 btn btn-primary">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

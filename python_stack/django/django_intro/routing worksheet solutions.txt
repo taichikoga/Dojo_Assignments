@@ -1,0 +1,43 @@
+Follow the path!!
+
+1. localhost:8000/home/showallthings
+"This is the page that will show all things"
+
+2. localhost:8000/dashboard/orange
+"You are at the octopus!"
+
+3. localhost:8000/home/telephone
+"You're at the ear!"
+
+4. localhost:8000/dashboard/yellow/tomato
+"You are at the beansprout!"
+
+5. localhost:8000/dashboard/purple/banana
+"You are at the elephant's toe"
+
+6. localhost:8000/home/green/hat
+"You're at the yellow shoe!"
+
+
+A LITTLE BIT LOUDER NOW
+
+1. localhost:8000/home/duckbill
+"You are at the octopus!"
+
+2. localhost:8000/dashboard/no
+*Does not go anywhere: redirect loop*
+
+3. localhost:8000/dashboard/orange/yellow
+"You are at the octopus!"
+
+4. localhost:8000/home/dog/ear
+"This is the page that will show all things"
+
+
+WITH PARAMETERS NOW!!
+
+1. localhost:8000/home/duckbill/boombox
+"my name is boombox"
+
+2. localhost:8000/dashboard/198/sharpies
+"I have 198 toenails!"
